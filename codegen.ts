@@ -5,19 +5,19 @@ const config: CodegenConfig = {
   overwrite: true,
   emitLegacyCommonJSImports: false,
   generates: {
-    "./src/common/types/graphql.ts": {
+    "./src/module/common/types/graphql.ts": {
       config: {
         useTypeImports: true,
         namingConvention: {
           transformUnderscore: true,
         },
         enumsAsTypes: true,
-        contextType: "../../server/apollo/context.js#GraphQLContext",
+        contextType: "../../../server/apollo/context.js#GraphQLContext",
         useIndexSignature: true,
         typesPrefix: "Gql",
         mappers: {
-          Account: "../../module/account/model.js#Account",
-          Organization: "../../module/organization/model.js#Organization",
+          Account: "../../account/model.js#Account",
+          Organization: "../../organization/model.js#Organization",
         },
       },
       plugins: ["typescript", "typescript-resolvers"],
@@ -27,7 +27,7 @@ const config: CodegenConfig = {
       presetConfig: {
         useGraphQLModules: false,
         baseTypesPath: "./common/types/graphql.ts",
-        importBaseTypesFrom: "../../../common/types/graphql.ts",
+        importBaseTypesFrom: "../../common/types/graphql.ts",
         filename: "types/graphql.ts",
         requireRootResolvers: true,
       },

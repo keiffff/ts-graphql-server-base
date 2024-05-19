@@ -1,7 +1,7 @@
 import type { GraphQLResolveInfo } from 'graphql';
-import type { Account } from '../../module/account/model.js';
-import type { Organization } from '../../module/organization/model.js';
-import type { GraphQLContext } from '../../server/apollo/context.js';
+import type { Account } from '../../account/model.js';
+import type { Organization } from '../../organization/model.js';
+import type { GraphQLContext } from '../../../server/apollo/context.js';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };

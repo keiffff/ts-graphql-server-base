@@ -1,4 +1,4 @@
-import type * as Types from "../../../common/types/graphql.ts";
+import type * as Types from "../../common/types/graphql.ts";
 export namespace OrganizationModule {
   interface DefinedFields {
     Query: 'organization';
