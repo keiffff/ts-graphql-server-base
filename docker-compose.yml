@@ -1,0 +1,52 @@
+services:
+  app:
+    container_name: app
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      db_migrator:
+        condition: service_completed_successfully
+    command: "pnpm start"
+    env_file: ./.env
+  postgres:
+    container_name: postgres
+    image: postgres:16
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "app"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  db_migrator:
+    container_name: db_migrator
+    build: 
+      dockerfile: ./docker/Dockerfile.sqldef
+    volumes:
+      - ./db:/db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - PGPASSWORD=postgres
+    command: >
+      /bin/sh -c "
+        psqldef -h postgres -p 5432 -U postgres app < /db/schema.sql
+      "
+volumes:
+  db_data:
+    driver: local
+  node_modules:
