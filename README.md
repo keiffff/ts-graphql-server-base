@@ -13,3 +13,4 @@
 ## TODO
 - [ ] unit test設定（vitest/Testcontainers）・サンプルテスト実装
 - [ ] Github Actions設定
+- [ ] 便利系GraphQL Scalars追加
