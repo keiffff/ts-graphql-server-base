@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon",
+    "start": "node --env-file=.env --watch-path ./src --loader ts-node/esm -r tsconfig-paths/register ./src/index.ts",
     "typecheck": "tsc --noEmit",
     "build": "rimraf dist && tsc && copyfiles -u 1 'src/**/*.graphql' dist/",
     "gen:graphql": "graphql-codegen-esm --config codegen.ts",
@@ -45,7 +45,6 @@
     "@types/pg": "^8.11.6",
     "copyfiles": "^2.4.1",
     "kysely-codegen": "^0.15.0",
-    "nodemon": "^3.1.0",
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
