@@ -7,6 +7,7 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: Asia/Tokyo
+    open-pull-requests-limit: 10
     labels:
       - "npm dependencies"
     ignore:
