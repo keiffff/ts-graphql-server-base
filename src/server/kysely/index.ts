@@ -1,8 +1,8 @@
 import { CamelCasePlugin, Kysely, PostgresDialect, sql } from "kysely"
-import type { DB } from "kysely-codegen"
 import pg from "pg"
 import { logger } from "../../common/logger.js"
 import { env } from "../../config/env.js"
+import type { DB } from "./types.js"
 
 const db = new Kysely<DB>({
   dialect: new PostgresDialect({

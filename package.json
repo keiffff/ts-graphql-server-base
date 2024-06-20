@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "build": "rimraf dist && tsc && copyfiles -u 1 'src/**/*.graphql' dist/",
     "gen:graphql": "graphql-codegen-esm --config codegen.ts",
-    "gen:kysely": "kysely-codegen --camel-case --url postgres://postgres:postgres@localhost:5432/app",
+    "gen:kysely": "kysely-codegen --camel-case --url postgres://postgres:postgres@localhost:5432/app --out-file ./src/server/kysely/types.ts",
     "lint": "pnpm biome check --apply ."
   },
   "engines": {
