@@ -20,7 +20,7 @@ export const initKysely = async () => {
     await sql`SELECT 1;`.execute(db)
   } catch (e) {
     logger.error("Failed to establish database connection:", { e })
-    await db.destroy()
+    throw e
   }
 
   return db
