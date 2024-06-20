@@ -5,11 +5,12 @@ export type GraphQLContext = {
   db: Awaited<ReturnType<typeof initKysely>>
 }
 
-export const initGraphQLContext: ApolloFastifyContextFunction<GraphQLContext> =
-  async () => {
-    const db = await initKysely()
+export const initGraphQLContext: ApolloFastifyContextFunction<
+  GraphQLContext
+> = async () => {
+  const db = await initKysely()
 
-    return {
-      db,
-    }
+  return {
+    db,
   }
+}

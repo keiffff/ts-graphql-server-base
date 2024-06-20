@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.13.0"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run typecheck
+        run: pnpm typecheck
+      - name: Run lint
+        run: pnpm lint
