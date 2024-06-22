@@ -9,18 +9,29 @@ on:
       - "**"
 
 jobs:
-  ci:
+  typecheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: "20.13.0"
+          node-version-file: ".node-version"
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
       - name: Run typecheck
         run: pnpm typecheck
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
       - name: Run lint
         run: pnpm lint
