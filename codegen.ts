@@ -16,8 +16,8 @@ const config: CodegenConfig = {
         useIndexSignature: true,
         typesPrefix: "Gql",
         mappers: {
-          Account: "../../account/model.js#Account",
-          Organization: "../../organization/model.js#Organization",
+          Account: "../../account/model/index.js#Account",
+          Organization: "../../organization/model/index.js#Organization",
         },
       },
       plugins: ["typescript", "typescript-resolvers"],

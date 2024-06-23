@@ -1,53 +1,22 @@
-import { groupBy, map } from "lodash-es"
+import { findAccountById } from "./model/findAccountById/index.js"
+import { findOrganizationsByIds } from "./model/findOrganizationsByIds/index.js"
 import type { AccountModule } from "./types/graphql.js"
 
 export const resolver: AccountModule.Resolvers = {
   Query: {
-    account: async (_, { id }, { db }) => {
-      const accounts = await db
-        .selectFrom("account")
-        .innerJoin(
-          "accountOrganization",
-          "accountOrganization.accountId",
-          "account.id",
-        )
-        .select([
-          "account.id",
-          "account.name",
-          "accountOrganization.organizationId",
-        ])
-        .where("account.id", "=", id)
-        .execute()
+    account: async (_, { id }) => {
+      const account = await findAccountById(id)
 
-      if (accounts.length === 0) {
-        return null
-      }
-
-      return {
-        id: accounts[0].id,
-        name: accounts[0].name,
-        organizationIds: accounts.map((account) => account.organizationId),
-      }
+      return account
     },
   },
   Account: {
-    organizations: async (account, _, { db }) => {
-      const organizations = await db
-        .selectFrom("organization")
-        .innerJoin(
-          "accountOrganization",
-          "accountOrganization.organizationId",
-          "organization.id",
-        )
-        .select(["id", "name", "accountOrganization.accountId"])
-        .where("id", "in", account.organizationIds)
-        .execute()
+    organizations: async (account, _) => {
+      const organizations = await findOrganizationsByIds(
+        account.organizationIds,
+      )
 
-      return map(groupBy(organizations, "id"), (organizations) => ({
-        id: organizations[0].id,
-        name: organizations[0].name,
-        accountIds: organizations.map((organization) => organization.accountId),
-      }))
+      return organizations
     },
   },
 }
