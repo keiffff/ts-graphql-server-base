@@ -1,4 +1,4 @@
-FROM node:20.13.0 AS builder
+FROM node:20.15.0-slim AS builder
 
 RUN npm install -g pnpm@latest
 
@@ -12,7 +12,7 @@ COPY . .
 
 RUN pnpm build
 
-FROM node:20.13.0 AS production
+FROM node:20.15.0-slim AS production
 
 RUN npm install -g pnpm@latest
 
