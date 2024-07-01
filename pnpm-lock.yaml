@@ -73,8 +73,8 @@ importers:
         specifier: ^4.0.8
         version: 4.0.8(graphql@16.9.0)
       '@graphql-codegen/typescript-resolvers':
-        specifier: ^4.1.0
-        version: 4.1.0(graphql@16.9.0)
+        specifier: ^4.2.0
+        version: 4.2.0(graphql@16.9.0)
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
@@ -638,8 +638,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/typescript-resolvers@4.1.0':
-    resolution: {integrity: sha512-JKosVjsZHaGfXIllWxuPPJ9DsAh72GVuyB+IFU3jNoM2sXuSNJsBVIT0CzpsxZr0rdkpcY6FfG2sS3zpE/TQrQ==}
+  '@graphql-codegen/typescript-resolvers@4.2.0':
+    resolution: {integrity: sha512-zy/H3T2RTT3PEkNS3CSdgF1lFrRsbHXu1WAIUhknmtsQugNBE2B5rbdPx8Wdat7QxtReSEEQ54Tgl9F87ecqyg==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
@@ -3669,11 +3669,11 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-codegen/typescript-resolvers@4.1.0(graphql@16.9.0)':
+  '@graphql-codegen/typescript-resolvers@4.2.0(graphql@16.9.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.0.4(graphql@16.9.0)
       '@graphql-codegen/typescript': 4.0.8(graphql@16.9.0)
-      '@graphql-codegen/visitor-plugin-common': 5.2.0(graphql@16.9.0)
+      '@graphql-codegen/visitor-plugin-common': 5.3.0(graphql@16.9.0)
       '@graphql-tools/utils': 10.2.2(graphql@16.9.0)
       auto-bind: 4.0.0
       graphql: 16.9.0
