@@ -67,8 +67,8 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2(@types/node@20.14.9)(graphql@16.9.0)(typescript@5.5.2)
       '@graphql-codegen/graphql-modules-preset':
-        specifier: ^4.0.7
-        version: 4.0.7(graphql@16.9.0)
+        specifier: ^4.0.8
+        version: 4.0.8(graphql@16.9.0)
       '@graphql-codegen/typescript':
         specifier: ^4.0.8
         version: 4.0.8(graphql@16.9.0)
@@ -613,8 +613,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/graphql-modules-preset@4.0.7':
-    resolution: {integrity: sha512-E3GKLoT23VSLJXjdmyy7ymMh18B0/DgTaEV7J9ctGppS20m+CQErPAzbMLe+Lqv7bgbTbBJHLwD1oqqoSXVg3w==}
+  '@graphql-codegen/graphql-modules-preset@4.0.8':
+    resolution: {integrity: sha512-Q4Wxag0dYSLhqHqdOoHGL6nijtQsgooxQk5vhCQ9IJLDMsbtjE+iuAMNFsHaMeeHxwYgqeeXzxKNS/YBWIQoNQ==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
@@ -3615,10 +3615,10 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-codegen/graphql-modules-preset@4.0.7(graphql@16.9.0)':
+  '@graphql-codegen/graphql-modules-preset@4.0.8(graphql@16.9.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.0.4(graphql@16.9.0)
-      '@graphql-codegen/visitor-plugin-common': 5.2.0(graphql@16.9.0)
+      '@graphql-codegen/visitor-plugin-common': 5.3.0(graphql@16.9.0)
       '@graphql-tools/utils': 10.2.2(graphql@16.9.0)
       change-case-all: 1.0.15
       graphql: 16.9.0
