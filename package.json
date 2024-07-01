@@ -41,7 +41,7 @@
     "@biomejs/biome": "1.8.2",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/graphql-modules-preset": "^4.0.7",
-    "@graphql-codegen/typescript": "^4.0.7",
+    "@graphql-codegen/typescript": "^4.0.8",
     "@graphql-codegen/typescript-resolvers": "^4.1.0",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.14.9",
