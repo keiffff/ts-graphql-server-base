@@ -2,12 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
   "files": {
     "include": ["*.*ts", "**/*.*ts"],
-    "ignore": [
-      "dist/**/*",
-      "node_modules/**/*",
-      "**/types/graphql.ts",
-      "biome.json"
-    ]
+    "ignore": ["dist/**/*", "node_modules/**/*", "**/types/graphql.ts"]
   },
   "organizeImports": {
     "enabled": true
