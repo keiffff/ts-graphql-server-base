@@ -2,7 +2,12 @@
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
   "files": {
     "include": ["*.*ts", "**/*.*ts"],
-    "ignore": ["dist", "biome.json"]
+    "ignore": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "**/types/graphql.ts",
+      "biome.json"
+    ]
   },
   "organizeImports": {
     "enabled": true
@@ -13,13 +18,7 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 80,
-    "lineEnding": "lf",
-    "ignore": [
-      "dist/**/*",
-      "node_modules/**/*",
-      "**/types/graphql.ts",
-      "biome.json"
-    ]
+    "lineEnding": "lf"
   },
   "javascript": {
     "formatter": {
@@ -72,12 +71,6 @@
         "noConsole": "error"
       }
     },
-    "ignore": [
-      "dist/**/*",
-      "node_modules/**/*",
-      "codegen.ts",
-      "**/types/graphql.ts",
-      "biome.json"
-    ]
+    "ignore": ["codegen.ts"]
   }
 }
