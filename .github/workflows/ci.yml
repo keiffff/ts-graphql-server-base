@@ -3,10 +3,13 @@ name: CI
 on:
   push:
     branches:
-      - "**"
+      - "*"
   pull_request:
     branches:
-      - "**"
+      - "*"
+
+permissions:
+  pull-requests: write
 
 jobs:
   typecheck:
@@ -35,3 +38,33 @@ jobs:
         run: pnpm install
       - name: Run lint
         run: pnpm lint
+  graphql-codegen-diff-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run graphql-codegen Check
+        id: codegen-check
+        run: pnpm gen:graphql --check
+        continue-on-error: true
+      - name: PR Comment
+        if: steps.codegen-check.outcome == 'failure' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: '⚠️ graphql-codegenが実行されていないか、生成されたコードが最新ではありません。`pnpm gen:graphql`を実行し、変更をコミットしてください。'
+            })
+      - name: Fail if changes detected
+        if: steps.codegen-check.outcome == 'failure'
+        run: exit 1
