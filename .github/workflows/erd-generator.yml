@@ -38,7 +38,7 @@ jobs:
       - name: Execute migration
         run: |
           go install github.com/sqldef/sqldef/cmd/psqldef@latest
-          psqldef -h postgres -p 5432 -U postgres app < ./db/schema.sql
+          psqldef -p 5432 -U postgres app < ./db/schema.sql
       - uses: k1low/setup-tbls@v1
       - name: Run tbls
         run: |
