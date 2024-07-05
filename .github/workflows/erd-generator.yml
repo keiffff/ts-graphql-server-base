@@ -69,5 +69,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
-              body: `✨ ER diagram が更新されました。 commit: ${{ steps.commit-er-diagram.outputs.commit_hash }}.`
+              body: `✨ ER diagram が更新されました。 commit: ${{ steps.commit-er-diagram.outputs.commit_sha }}.`
             })
