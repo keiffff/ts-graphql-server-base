@@ -2,7 +2,14 @@
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
   "files": {
     "include": ["*.*ts", "**/*.*ts"],
-    "ignore": ["dist/**/*", "node_modules/**/*", "**/types/graphql.ts"]
+    "ignore": [
+      "dist/**/*",
+      "node_modules/**/*",
+      // graphql-codegenの生成ファイル
+      "**/types/graphql.ts",
+      // kysely-codegenの生成ファイル
+      "./src/common/db/types.ts"
+    ]
   },
   "organizeImports": {
     "enabled": true
