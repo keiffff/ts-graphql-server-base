@@ -6,6 +6,7 @@ services:
       dockerfile: ./docker/Dockerfile.dev
     volumes:
       - .:/app
+      - /app/node_modules
     ports:
       - "4000:4000"
     depends_on:
@@ -50,3 +51,4 @@ volumes:
   db_data:
     driver: local
   node_modules:
+    driver: local
