@@ -5,7 +5,6 @@ import {
   parse,
   stripIgnoredCharacters,
 } from "graphql"
-import { AppError } from "../../../common/error.js"
 import { logger } from "../../../common/logger.js"
 
 export const requestLogPlugin = (): ApolloServerPlugin => ({
@@ -33,11 +32,7 @@ export const requestLogPlugin = (): ApolloServerPlugin => ({
         for (const error of errors) {
           logger.error(error.message, {
             operationName,
-            stack: error.stack,
-            extensions:
-              error.originalError instanceof AppError
-                ? error.originalError.metadata
-                : {},
+            error: error.toJSON(),
           })
         }
       },
