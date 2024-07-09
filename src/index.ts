@@ -24,6 +24,9 @@ const runGraphQLServer = async () => {
   if (env.nodeEnv === "development") {
     logger.info(
       `🚀 Server ready at: http://localhost:${env.server.port}/graphql`,
+      {
+        env: env.appEnv,
+      },
     )
   }
 }
