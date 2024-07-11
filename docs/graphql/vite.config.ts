@@ -12,4 +12,5 @@ export default defineConfig({
       },
     },
   },
+  base: "/ts-graphql-server-base/",
 })
