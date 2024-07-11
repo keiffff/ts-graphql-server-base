@@ -41,6 +41,12 @@ const config: CodegenConfig = {
       },
       plugins: ["typescript", "typescript-resolvers", ...basePlugins],
     },
+    "./docs/graphql/src/introspection.json": {
+      plugins: ["introspection"],
+      config: {
+        minify: true,
+      },
+    },
   },
 }
 

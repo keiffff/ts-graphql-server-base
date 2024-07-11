@@ -7,7 +7,7 @@ on:
       - reopened
     paths:
       - db/schema.sql
-      - db/tbls.yml
+      - ./tbls.yml
 
 jobs:
   tbls:
@@ -45,7 +45,7 @@ jobs:
       - uses: k1low/setup-tbls@v1
       - name: Run tbls
         run: |
-          tbls doc -c ./db/tbls.yml --rm-dist
+          tbls doc -c ./tbls.yml --rm-dist
       - name: Check diff
         id: check-diff
         run: |
