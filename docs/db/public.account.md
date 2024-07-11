@@ -8,6 +8,7 @@
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | uuid | gen_random_uuid() | false | [public.account_organization](public.account_organization.md) |  |  |
 | name | text |  | false |  |  |  |
+| email | text |  | false |  |  |  |
 | created_at | timestamp with time zone | CURRENT_TIMESTAMP | false |  |  |  |
 | updated_at | timestamp with time zone | CURRENT_TIMESTAMP | false |  |  |  |
 
@@ -16,12 +17,14 @@
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
 | account_pkey | PRIMARY KEY | PRIMARY KEY (id) |
+| account_email_key | UNIQUE | UNIQUE (email) |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | account_pkey | CREATE UNIQUE INDEX account_pkey ON public.account USING btree (id) |
+| account_email_key | CREATE UNIQUE INDEX account_email_key ON public.account USING btree (email) |
 
 ## Relations
 
