@@ -13,7 +13,6 @@ export const initApolloServer = async (fastify: FastifyInstance) => {
     schema: graphQLSchema,
     formatError,
     plugins: [fastifyApolloDrainPlugin(fastify), requestLogPlugin()],
-    introspection: true,
   })
 
   await apollo.start()
