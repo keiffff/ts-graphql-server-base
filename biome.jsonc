@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
   "files": {
-    "include": ["*.*ts", "**/*.*ts"],
+    "include": ["*.ts", "*.jsx"],
     "ignore": [
       "dist/**/*",
       "node_modules/**/*",
@@ -73,6 +73,6 @@
         "noConsole": "error"
       }
     },
-    "ignore": ["codegen.ts"]
+    "ignore": ["codegen.ts", "./docs/graphql/vite.config.ts"]
   }
 }
