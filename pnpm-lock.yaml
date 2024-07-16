@@ -94,8 +94,8 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1
       glob:
-        specifier: ^10.4.3
-        version: 10.4.3
+        specifier: ^10.4.5
+        version: 10.4.5
       kysely-codegen:
         specifier: ^0.15.0
         version: 0.15.0(kysely@0.27.4)(pg@8.12.0)
@@ -1740,9 +1740,8 @@ packages:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
 
-  glob@10.4.3:
-    resolution: {integrity: sha512-Q38SGlYRpVtDBPSWEylRyctn7uDeTp4NQERTLiCT1FqA9JXPYWqAVmQU6qh4r/zMM5ehxTcbaO8EjhWnvEhmyg==}
-    engines: {node: '>=18'}
+  glob@10.4.5:
+    resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
 
   glob@7.2.3:
@@ -5117,7 +5116,7 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@10.4.3:
+  glob@10.4.5:
     dependencies:
       foreground-child: 3.2.1
       jackspeak: 3.4.0
@@ -5910,7 +5909,7 @@ snapshots:
 
   rimraf@5.0.9:
     dependencies:
-      glob: 10.4.3
+      glob: 10.4.5
 
   run-async@2.4.1: {}
 
