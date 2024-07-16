@@ -1,4 +1,5 @@
 import type { CodegenConfig } from "@graphql-codegen/cli"
+import { UUIDDefinition } from "graphql-scalars"
 
 const basePlugins = [
   {
@@ -12,7 +13,7 @@ const basePlugins = [
 ]
 
 const config: CodegenConfig = {
-  schema: "./src/module/**/schema.graphql",
+  schema: [UUIDDefinition, "./src/module/**/schema.graphql"],
   overwrite: true,
   emitLegacyCommonJSImports: false,
   generates: {
@@ -26,6 +27,10 @@ const config: CodegenConfig = {
         requireRootResolvers: true,
       },
       config: {
+        scalars: {
+          UUID: "string",
+        },
+        strictScalars: true,
         useTypeImports: true,
         namingConvention: {
           transformUnderscore: true,

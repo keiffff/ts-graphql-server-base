@@ -1,5 +1,6 @@
 import { findAccountById } from "./model/findAccountById/index.js"
 import { findOrganizationsByIds } from "./model/findOrganizationsByIds/index.js"
+import { insertAccount } from "./model/insertAccount/index.js"
 import type { AccountModule } from "./types/graphql.js"
 
 export const resolver: AccountModule.Resolvers = {
@@ -17,6 +18,19 @@ export const resolver: AccountModule.Resolvers = {
       )
 
       return organizations
+    },
+  },
+  Mutation: {
+    signUp: async (_, { input }) => {
+      const newAccount = await insertAccount(input.name)
+
+      return {
+        account: {
+          id: newAccount.id,
+          name: newAccount.name,
+          organizationIds: [],
+        },
+      }
     },
   },
 }

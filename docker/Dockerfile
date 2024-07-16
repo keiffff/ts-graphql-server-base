@@ -1,6 +1,6 @@
 FROM node:20.15.1-slim AS builder
 
-RUN npm install -g pnpm@latest
+RUN npm install -g pnpm@9.5.0
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN pnpm build
 
 FROM node:20.15.1-slim AS production
 
-RUN npm install -g pnpm@latest
+RUN npm install -g pnpm@9.5.0
 
 WORKDIR /app
 

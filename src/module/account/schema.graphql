@@ -1,9 +1,21 @@
 type Query {
-  account(id: ID!): Account
+  account(id: UUID!): Account
+}
+
+type Mutation {
+  signUp(input: SignUpInput!): SignUpPayload
 }
 
 type Account {
-  id: ID!
+  id: UUID!
   name: String!
   organizations: [Organization!]!
+}
+
+input SignUpInput {
+  name: String! @constraint(minLength: 1, maxLength: 40)
+}
+
+type SignUpPayload {
+  account: Account!
 }

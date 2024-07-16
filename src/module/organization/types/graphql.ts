@@ -9,6 +9,7 @@ export namespace OrganizationModule {
   
   export type Query = Pick<Types.GqlQuery, DefinedFields['Query']>;
   export type Organization = Pick<Types.GqlOrganization, DefinedFields['Organization']>;
+  export type UUID = Types.GqlUuid;
   export type Account = Types.GqlAccount;
   
   export type QueryResolvers = Required<Pick<Types.GqlQueryResolvers, DefinedFields['Query']>>;

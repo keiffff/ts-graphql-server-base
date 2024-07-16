@@ -1,9 +1,9 @@
 type Query {
-  organization(id: ID!): Organization
+  organization(id: UUID!): Organization
 }
 
 type Organization {
-  id: ID!
+  id: UUID!
   name: String!
   accounts: [Account!]!
 }

@@ -1,28 +1,30 @@
 import { join, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
-import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader"
-import { loadSchema } from "@graphql-tools/load"
 import { loadFiles } from "@graphql-tools/load-files"
-import { mergeResolvers } from "@graphql-tools/merge"
-import { addResolversToSchema } from "@graphql-tools/schema"
+import { mergeResolvers, mergeTypeDefs } from "@graphql-tools/merge"
+import { makeExecutableSchema } from "@graphql-tools/schema"
+import { constraintDirectiveTypeDefs } from "graphql-constraint-directive/apollo4.js"
+import {
+  resolvers as scalarResolvers,
+  typeDefs as scalarTypeDefs,
+} from "graphql-scalars"
 
-const createGraphQLSchema = async () => {
+export const createGraphQLSchema = async () => {
   const baseDir = resolve(fileURLToPath(import.meta.url), "../../../")
 
-  const loadedSchema = await loadSchema(join(baseDir, "/module/*/*.graphql"), {
-    loaders: [new GraphQLFileLoader()],
-  })
-
-  const resolvers = mergeResolvers(
-    await loadFiles(join(baseDir, "/module/*/resolver.*"), {
-      exportNames: ["resolver"],
-    }),
+  const typeDefs = await loadFiles(join(baseDir, "/module/*/*.graphql")).then(
+    (types) => mergeTypeDefs(types),
   )
 
-  return addResolversToSchema({
-    schema: loadedSchema,
+  const resolvers = mergeResolvers([
+    scalarResolvers,
+    ...(await loadFiles(join(baseDir, "/module/*/resolver.*"), {
+      exportNames: ["resolver"],
+    })),
+  ])
+
+  return makeExecutableSchema({
+    typeDefs: [scalarTypeDefs, constraintDirectiveTypeDefs, typeDefs],
     resolvers,
   })
 }
-
-export const graphQLSchema = await createGraphQLSchema()

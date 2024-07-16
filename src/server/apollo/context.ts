@@ -2,9 +2,10 @@ import type { ApolloFastifyContextFunction } from "@as-integrations/fastify"
 import { findAccountById } from "../../module/account/model/findAccountById/index.js"
 
 export type GraphQLContext = {
-  requester: {
+  requester?: {
     id: string
-  } | null
+    organizationIds: string[]
+  }
 }
 
 export const initGraphQLContext: ApolloFastifyContextFunction<
@@ -16,6 +17,11 @@ export const initGraphQLContext: ApolloFastifyContextFunction<
   const account = await findAccountById(accountId)
 
   return {
-    requester: account,
+    requester: account
+      ? {
+          id: account.id,
+          organizationIds: account.organizationIds,
+        }
+      : undefined,
   }
 }

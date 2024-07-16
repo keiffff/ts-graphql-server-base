@@ -17,7 +17,8 @@ export const formatError = (error: GraphQLFormattedError) => {
   return new GraphQLError("Unexpected error.", {
     path: error.path,
     extensions: {
-      code: ApolloServerErrorCode.INTERNAL_SERVER_ERROR,
+      code:
+        error.extensions?.code || ApolloServerErrorCode.INTERNAL_SERVER_ERROR,
     },
   })
 }

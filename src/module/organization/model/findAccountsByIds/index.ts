@@ -2,6 +2,10 @@ import { groupBy, map } from "lodash-es"
 import { db } from "../../../../common/db/index.js"
 
 export const findAccountsByIds = async (ids: string[]) => {
+  if (ids.length === 0) {
+    return []
+  }
+
   const accounts = await db
     .selectFrom("account")
     .innerJoin(

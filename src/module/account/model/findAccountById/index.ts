@@ -3,7 +3,7 @@ import { db } from "../../../../common/db/index.js"
 export const findAccountById = async (id: string) => {
   const accounts = await db
     .selectFrom("account")
-    .innerJoin(
+    .leftJoin(
       "accountOrganization",
       "accountOrganization.accountId",
       "account.id",
@@ -23,6 +23,8 @@ export const findAccountById = async (id: string) => {
   return {
     id: accounts[0].id,
     name: accounts[0].name,
-    organizationIds: accounts.map((account) => account.organizationId),
+    organizationIds: accounts
+      .map((account) => account.organizationId)
+      .filter((organizationId) => organizationId !== null),
   }
 }
