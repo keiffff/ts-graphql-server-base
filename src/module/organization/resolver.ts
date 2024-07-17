@@ -1,4 +1,4 @@
-import { findAccountsByIds } from "./model/findAccountsByIds/index.js"
+import type { Account } from "../account/model/index.js"
 import { findOrganizationById } from "./model/findOrganizationById/index.js"
 import type { OrganizationModule } from "./types/graphql.js"
 
@@ -11,10 +11,15 @@ export const resolver: OrganizationModule.Resolvers = {
     },
   },
   Organization: {
-    accounts: async (organization, _) => {
-      const accounts = await findAccountsByIds(organization.accountIds)
+    accounts: async (organization, _, { dataLoaders }) => {
+      const accounts = await dataLoaders.account.loadMany(
+        organization.accountIds,
+      )
 
-      return accounts
+      return accounts.filter(
+        (account): account is Account =>
+          account !== null && !(account instanceof Error),
+      )
     },
   },
 }

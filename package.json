@@ -30,6 +30,7 @@
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.4",
     "@graphql-tools/schema": "^10.0.4",
+    "dataloader": "^2.2.2",
     "fastify": "^4.28.1",
     "graphql": "^16.9.0",
     "graphql-constraint-directive": "^5.4.3",

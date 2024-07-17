@@ -1,7 +1,7 @@
 import { groupBy, map } from "lodash-es"
 import { db } from "../../../../common/db/index.js"
 
-export const findAccountsByIds = async (ids: string[]) => {
+export const findAccountsByIds = async (ids: readonly string[]) => {
   if (ids.length === 0) {
     return []
   }
