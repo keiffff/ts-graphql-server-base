@@ -1,5 +1,5 @@
 import DataLoader from "dataloader"
-import { findOrganizationsByIds } from "../account/model/findOrganizationsByIds/index.js"
+import { findOrganizationsByIds } from "./model/findOrganizationsByIds/index.js"
 import type { Organization } from "./model/index.js"
 
 export const createOrganizationDataLoader = () =>
