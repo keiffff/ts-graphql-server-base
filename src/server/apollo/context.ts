@@ -1,5 +1,6 @@
 import type { ApolloFastifyContextFunction } from "@as-integrations/fastify"
 import { createAccountDataLoader } from "../../module/account/dataLoader.js"
+import { findAccountById } from "../../module/account/model/findAccountById/index.js"
 import { createOrganizationDataLoader } from "../../module/organization/dataLoader.js"
 
 export type GraphQLContext = {
@@ -17,15 +18,11 @@ export type GraphQLContext = {
 
 export const initGraphQLContext: ApolloFastifyContextFunction<
   GraphQLContext
-  // biome-ignore lint/suspicious/useAwait: <explanation>
 > = async () => {
   // TODO: 認証情報からアカウントIDを引いてくる
   const accountId = "018f1279-9922-7e9a-b2f7-769d26115737"
 
-  const account = {
-    id: accountId,
-    organizationIds: [],
-  }
+  const account = await findAccountById(accountId)
 
   return {
     req: {
