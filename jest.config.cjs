@@ -1,10 +1,11 @@
 /** @type {import('jest').Config} */
 const config = {
-  preset: 'ts-jest/presets/default-esm',
+  resolver: 'ts-jest-resolver',
+  extensionsToTreatAsEsm: ['.ts'],
   roots: ['<rootDir>/src'],
   testMatch: ['**/*.test.ts'],
   transform: {
-    '^.+\\.ts$': [
+    '^.+\\.(t|j)sx?$': [
       'ts-jest',
       { useESM: true }
     ],
