@@ -1,6 +1,6 @@
-FROM node:20.15.1-slim AS builder
+FROM node:20.17.0-slim AS builder
 
-RUN npm install -g pnpm@9.5.0
+RUN npm install -g pnpm@9.10.0
 
 WORKDIR /app
 
@@ -12,9 +12,9 @@ COPY . .
 
 RUN pnpm build
 
-FROM node:20.15.1-slim AS production
+FROM node:20.17.0-slim AS production
 
-RUN npm install -g pnpm@9.5.0
+RUN npm install -g pnpm@9.10.0
 
 WORKDIR /app
 
