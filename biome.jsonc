@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.1/schema.json",
   "files": {
     "include": ["*.ts", "*.jsx"],
     "ignore": [
@@ -59,7 +59,7 @@
         "useSingleCaseStatement": "error"
       },
       "suspicious": {
-        "noConsoleLog": "error",
+        "noConsole": "error",
         "useAwait": "error",
         "noDuplicateTestHooks": "error",
         "noExportsInTest": "error",
@@ -68,9 +68,6 @@
       "performance": {
         "noBarrelFile": "error",
         "noReExportAll": "error"
-      },
-      "nursery": {
-        "noConsole": "error"
       }
     },
     "ignore": ["codegen.ts", "./docs/graphql/vite.config.ts"]
