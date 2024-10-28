@@ -54,8 +54,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       pg:
-        specifier: ^8.13.0
-        version: 8.13.0
+        specifier: ^8.13.1
+        version: 8.13.1
       winston:
         specifier: ^3.15.0
         version: 3.15.0
@@ -101,7 +101,7 @@ importers:
         version: 11.0.0
       kysely-codegen:
         specifier: ^0.17.0
-        version: 0.17.0(kysely@0.27.4)(pg@8.13.0)
+        version: 0.17.0(kysely@0.27.4)(pg@8.13.1)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -2390,8 +2390,8 @@ packages:
     resolution: {integrity: sha512-cRL3JpS3lKMGsKaWndugWQoLOCoP+Cic8oseVcbr0qhPzYD5DWXK+RZ9LY9wxRf7RQia4SCwQlXk0q6FCPrVng==}
     engines: {node: '>=10'}
 
-  pg@8.13.0:
-    resolution: {integrity: sha512-34wkUTh3SxTClfoHB3pQ7bIMvw9dpFU1audQQeZG837fmHfHpr14n/AELVDoOYVDW2h5RDWU78tFjkD+erSBsw==}
+  pg@8.13.1:
+    resolution: {integrity: sha512-OUir1A0rPNZlX//c7ksiu7crsGZTKSOXJPgtNiHGIlC9H0lO+NC6ZDYksSgBYY/thSWhnSRBv8w1lieNNGATNQ==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -5342,7 +5342,7 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  kysely-codegen@0.17.0(kysely@0.27.4)(pg@8.13.0):
+  kysely-codegen@0.17.0(kysely@0.27.4)(pg@8.13.1):
     dependencies:
       chalk: 4.1.2
       dotenv: 16.4.5
@@ -5353,7 +5353,7 @@ snapshots:
       minimist: 1.2.8
       pluralize: 8.0.0
     optionalDependencies:
-      pg: 8.13.0
+      pg: 8.13.1
 
   kysely@0.27.4: {}
 
@@ -5650,9 +5650,9 @@ snapshots:
 
   pg-numeric@1.0.2: {}
 
-  pg-pool@3.7.0(pg@8.13.0):
+  pg-pool@3.7.0(pg@8.13.1):
     dependencies:
-      pg: 8.13.0
+      pg: 8.13.1
 
   pg-protocol@1.7.0: {}
 
@@ -5674,10 +5674,10 @@ snapshots:
       postgres-interval: 3.0.0
       postgres-range: 1.1.4
 
-  pg@8.13.0:
+  pg@8.13.1:
     dependencies:
       pg-connection-string: 2.7.0
-      pg-pool: 3.7.0(pg@8.13.0)
+      pg-pool: 3.7.0(pg@8.13.1)
       pg-protocol: 1.7.0
       pg-types: 2.2.0
       pgpass: 1.0.5
