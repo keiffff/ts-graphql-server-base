@@ -20,7 +20,7 @@
     "yarn": "use pnpm please!"
   },
   "dependencies": {
-    "@apollo/server": "^4.11.0",
+    "@apollo/server": "^4.11.2",
     "@as-integrations/fastify": "^2.1.1",
     "@fastify/compress": "^7.0.3",
     "@fastify/cors": "^9.0.1",
