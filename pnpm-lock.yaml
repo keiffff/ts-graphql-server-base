@@ -27,8 +27,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(graphql@16.10.0)
       '@graphql-tools/merge':
-        specifier: ^9.0.17
-        version: 9.0.17(graphql@16.10.0)
+        specifier: ^9.0.19
+        version: 9.0.19(graphql@16.10.0)
       '@graphql-tools/schema':
         specifier: ^10.0.18
         version: 10.0.18(graphql@16.10.0)
@@ -923,12 +923,6 @@ packages:
 
   '@graphql-tools/merge@8.4.2':
     resolution: {integrity: sha512-XbrHAaj8yDuINph+sAfuq3QCZ/tKblrTLOpirK0+CAgNlZUCHs0Fa+xtMUURgwCVThLle1AF7svJCxFizygLsw==}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-
-  '@graphql-tools/merge@9.0.17':
-    resolution: {integrity: sha512-3K4g8KKbIqfdmK0L5+VtZsqwAeElPkvT5ejiH+KEhn2wyKNCi4HYHxpQk8xbu+dSwLlm9Lhet1hylpo/mWCkuQ==}
-    engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
@@ -2838,9 +2832,6 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  tslib@2.7.0:
-    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -4084,12 +4075,6 @@ snapshots:
       graphql: 16.10.0
       tslib: 2.8.1
 
-  '@graphql-tools/merge@9.0.17(graphql@16.10.0)':
-    dependencies:
-      '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
-      graphql: 16.10.0
-      tslib: 2.7.0
-
   '@graphql-tools/merge@9.0.19(graphql@16.10.0)':
     dependencies:
       '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
@@ -5125,7 +5110,7 @@ snapshots:
       '@graphql-tools/graphql-file-loader': 8.0.12(graphql@16.10.0)
       '@graphql-tools/json-file-loader': 8.0.11(graphql@16.10.0)
       '@graphql-tools/load': 8.0.12(graphql@16.10.0)
-      '@graphql-tools/merge': 9.0.17(graphql@16.10.0)
+      '@graphql-tools/merge': 9.0.19(graphql@16.10.0)
       '@graphql-tools/url-loader': 8.0.24(@types/node@22.13.4)(graphql@16.10.0)
       '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
       cosmiconfig: 8.3.6(typescript@5.7.3)
@@ -6126,8 +6111,6 @@ snapshots:
   ts-log@2.2.7: {}
 
   tslib@2.6.3: {}
-
-  tslib@2.7.0: {}
 
   tslib@2.8.1: {}
 
