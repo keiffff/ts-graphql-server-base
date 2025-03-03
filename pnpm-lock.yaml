@@ -27,8 +27,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(graphql@16.10.0)
       '@graphql-tools/merge':
-        specifier: ^9.0.20
-        version: 9.0.20(graphql@16.10.0)
+        specifier: ^9.0.21
+        version: 9.0.21(graphql@16.10.0)
       '@graphql-tools/schema':
         specifier: ^10.0.20
         version: 10.0.20(graphql@16.10.0)
@@ -101,7 +101,7 @@ importers:
         version: 11.0.1
       kysely-codegen:
         specifier: ^0.18.0
-        version: 0.18.0(kysely@0.27.5)(pg@8.13.3)(typescript@5.7.3)
+        version: 0.18.0(kysely@0.27.5)(pg@8.13.3)(typescript@5.8.2)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -745,12 +745,6 @@ packages:
 
   '@graphql-tools/merge@8.4.2':
     resolution: {integrity: sha512-XbrHAaj8yDuINph+sAfuq3QCZ/tKblrTLOpirK0+CAgNlZUCHs0Fa+xtMUURgwCVThLle1AF7svJCxFizygLsw==}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-
-  '@graphql-tools/merge@9.0.20':
-    resolution: {integrity: sha512-bJ+rudkkhYaiWzRV3vCyu6CD6bJsrBV1e+L4MOor7p5wSBQBAs8IAW05IktQq1RH1KPvyZ62z77P0/VsapnSKA==}
-    engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
@@ -3703,12 +3697,6 @@ snapshots:
       graphql: 16.10.0
       tslib: 2.8.1
 
-  '@graphql-tools/merge@9.0.20(graphql@16.10.0)':
-    dependencies:
-      '@graphql-tools/utils': 10.8.2(graphql@16.10.0)
-      graphql: 16.10.0
-      tslib: 2.8.1
-
   '@graphql-tools/merge@9.0.21(graphql@16.10.0)':
     dependencies:
       '@graphql-tools/utils': 10.8.3(graphql@16.10.0)
@@ -4317,14 +4305,14 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.2
 
-  cosmiconfig@9.0.0(typescript@5.7.3):
+  cosmiconfig@9.0.0(typescript@5.8.2):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   cross-fetch@3.2.0:
     dependencies:
@@ -4733,7 +4721,7 @@ snapshots:
       '@graphql-tools/graphql-file-loader': 8.0.14(graphql@16.10.0)
       '@graphql-tools/json-file-loader': 8.0.13(graphql@16.10.0)
       '@graphql-tools/load': 8.0.14(graphql@16.10.0)
-      '@graphql-tools/merge': 9.0.20(graphql@16.10.0)
+      '@graphql-tools/merge': 9.0.21(graphql@16.10.0)
       '@graphql-tools/url-loader': 8.0.26(@types/node@22.13.5)(graphql@16.10.0)
       '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       cosmiconfig: 8.3.6(typescript@5.8.2)
@@ -4974,10 +4962,10 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  kysely-codegen@0.18.0(kysely@0.27.5)(pg@8.13.3)(typescript@5.7.3):
+  kysely-codegen@0.18.0(kysely@0.27.5)(pg@8.13.3)(typescript@5.8.2):
     dependencies:
       chalk: 4.1.2
-      cosmiconfig: 9.0.0(typescript@5.7.3)
+      cosmiconfig: 9.0.0(typescript@5.8.2)
       dotenv: 16.4.7
       dotenv-expand: 12.0.1
       git-diff: 2.0.6
