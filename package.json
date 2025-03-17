@@ -52,7 +52,7 @@
     "@types/pg": "^8.11.11",
     "copyfiles": "^2.4.1",
     "glob": "^11.0.1",
-    "kysely-codegen": "^0.18.2",
+    "kysely-codegen": "^0.18.3",
     "rimraf": "^6.0.1",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
