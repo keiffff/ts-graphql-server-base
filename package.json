@@ -37,7 +37,7 @@
     "lodash-es": "^4.17.21",
     "pg": "^8.15.6",
     "winston": "^3.17.0",
-    "zod": "^3.24.3"
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
