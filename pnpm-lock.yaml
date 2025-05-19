@@ -73,8 +73,8 @@ importers:
         specifier: ^5.0.6
         version: 5.0.6(@types/node@22.15.17)(graphql-sock@1.0.1(graphql@16.11.0))(graphql@16.11.0)(typescript@5.8.3)
       '@graphql-codegen/graphql-modules-preset':
-        specifier: ^4.0.16
-        version: 4.0.16(graphql@16.11.0)
+        specifier: ^4.0.17
+        version: 4.0.17(graphql@16.11.0)
       '@graphql-codegen/introspection':
         specifier: ^4.0.3
         version: 4.0.3(graphql@16.11.0)
@@ -578,8 +578,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/graphql-modules-preset@4.0.16':
-    resolution: {integrity: sha512-8ao1ZkdQBDavs1tAJiJKgKRCkCATcYvIGOXvz2UAWNdNjlri+kQ4FFtS5On1gvuurQy+dK46p8pmeFm7NvAgJQ==}
+  '@graphql-codegen/graphql-modules-preset@4.0.17':
+    resolution: {integrity: sha512-vsG+11D0i185gG23/ycej8+K455YW5jbfPUc0MWrJdULzpHLSFB4UyCeEIRRgZgum4w75JXtYLhR8qbFhmEV8w==}
     engines: {node: '>=16'}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -3406,7 +3406,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@graphql-codegen/graphql-modules-preset@4.0.16(graphql@16.11.0)':
+  '@graphql-codegen/graphql-modules-preset@4.0.17(graphql@16.11.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.11.0)
       '@graphql-codegen/visitor-plugin-common': 5.8.0(graphql@16.11.0)
