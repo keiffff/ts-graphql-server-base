@@ -60,8 +60,8 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
       zod:
-        specifier: ^3.25.46
-        version: 3.25.46
+        specifier: ^3.25.56
+        version: 3.25.56
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -2852,8 +2852,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.25.46:
-    resolution: {integrity: sha512-IqRxcHEIjqLd4LNS/zKffB3Jzg3NwqJxQQ0Ns7pdrvgGkwQsEBdEQcOHaBVqvvZArShRzI39+aMST3FBGmTrLQ==}
+  zod@3.25.56:
+    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
 
 snapshots:
 
@@ -4972,7 +4972,7 @@ snapshots:
       micromatch: 4.0.8
       minimist: 1.2.8
       pluralize: 8.0.0
-      zod: 3.25.46
+      zod: 3.25.56
     optionalDependencies:
       pg: 8.16.0
     transitivePeerDependencies:
@@ -5874,4 +5874,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.25.46: {}
+  zod@3.25.56: {}
