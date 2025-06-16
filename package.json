@@ -51,7 +51,7 @@
     "@types/node": "^22.15.31",
     "@types/pg": "^8.15.4",
     "copyfiles": "^2.4.1",
-    "glob": "^11.0.2",
+    "glob": "^11.0.3",
     "kysely-codegen": "^0.18.5",
     "rimraf": "^6.0.1",
     "tsx": "^4.19.4",
