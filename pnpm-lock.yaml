@@ -48,8 +48,8 @@ importers:
         specifier: ^1.24.2
         version: 1.24.2(graphql@16.11.0)
       kysely:
-        specifier: ^0.28.2
-        version: 0.28.2
+        specifier: ^0.28.3
+        version: 0.28.3
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
@@ -101,7 +101,7 @@ importers:
         version: 11.0.3
       kysely-codegen:
         specifier: ^0.18.5
-        version: 0.18.5(kysely@0.28.2)(pg@8.16.3)(typescript@5.8.3)
+        version: 0.18.5(kysely@0.28.3)(pg@8.16.3)(typescript@5.8.3)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1945,9 +1945,9 @@ packages:
       tedious:
         optional: true
 
-  kysely@0.28.2:
-    resolution: {integrity: sha512-4YAVLoF0Sf0UTqlhgQMFU9iQECdah7n+13ANkiuVfRvlK+uI0Etbgd7bVP36dKlG+NXWbhGua8vnGt+sdhvT7A==}
-    engines: {node: '>=18.0.0'}
+  kysely@0.28.3:
+    resolution: {integrity: sha512-svKnkSH72APRdjfVCCOknxaC9Eb3nA2StHG9d5/sKOqRvHRp2Dtf1XwDvc92b4B5v6LV+EAGWXQbZ5jMOvHaDw==}
+    engines: {node: '>=20.0.0'}
 
   light-my-request@5.14.0:
     resolution: {integrity: sha512-aORPWntbpH5esaYpGOOmri0OHDOe3wC5M2MQxZ9dvMLZm6DnaAn0kJlcbU9hwsQgLzmZyReKwFwwPkR+nHu5kA==}
@@ -5055,14 +5055,14 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  kysely-codegen@0.18.5(kysely@0.28.2)(pg@8.16.3)(typescript@5.8.3):
+  kysely-codegen@0.18.5(kysely@0.28.3)(pg@8.16.3)(typescript@5.8.3):
     dependencies:
       chalk: 4.1.2
       cosmiconfig: 9.0.0(typescript@5.8.3)
       dotenv: 16.5.0
       dotenv-expand: 12.0.2
       git-diff: 2.0.6
-      kysely: 0.28.2
+      kysely: 0.28.3
       micromatch: 4.0.8
       minimist: 1.2.8
       pluralize: 8.0.0
@@ -5072,7 +5072,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  kysely@0.28.2: {}
+  kysely@0.28.3: {}
 
   light-my-request@5.14.0:
     dependencies:
