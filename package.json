@@ -46,7 +46,7 @@
     "@graphql-codegen/graphql-modules-preset": "^4.0.17",
     "@graphql-codegen/introspection": "^4.0.3",
     "@graphql-codegen/typescript": "^4.1.6",
-    "@graphql-codegen/typescript-resolvers": "^4.5.1",
+    "@graphql-codegen/typescript-resolvers": "^4.5.2",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.18.0",
     "@types/pg": "^8.15.5",
