@@ -34,7 +34,7 @@
     "graphql-constraint-directive": "^5.4.3",
     "graphql-scalars": "^1.25.0",
     "kysely": "^0.28.10",
-    "lodash-es": "^4.17.22",
+    "lodash-es": "^4.17.23",
     "pg": "^8.17.1",
     "winston": "^3.19.0",
     "zod": "^3.25.76"
