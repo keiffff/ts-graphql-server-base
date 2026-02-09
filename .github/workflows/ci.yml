@@ -15,7 +15,7 @@ jobs:
   typecheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
@@ -28,7 +28,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
@@ -41,7 +41,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
@@ -54,7 +54,7 @@ jobs:
   graphql-codegen-diff-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
